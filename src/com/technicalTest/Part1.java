@@ -4,6 +4,7 @@ public class Part1 {
 
     public static int lightsOn = 0;
 
+    // (a, b) and (c, d) coordinates
     // action "on", "off" or "toggle"
     public static void lightAction(int[][] lights, int a, int b, int c, int d, String action) {
         for (int i = a; i <= c; ++i) {
