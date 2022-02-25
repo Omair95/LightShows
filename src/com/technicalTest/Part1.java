@@ -14,11 +14,15 @@ public class Part1 {
         for (int i = a; i <= c; ++i) {
             for (int j = b; j <= d; ++j) {
                 if (action.equals("on")) {
-                    lights[i][j] = 1;
-                    ++lightsOn;
+                    if (lights[i][j] == 0) {
+                        lights[i][j] = 1;
+                        ++lightsOn;
+                    }
                 } else if (action.equals("off")) {
-                    lights[i][j] = 0;
-                    --lightsOn;
+                    if (lights[i][j] == 1) {
+                        lights[i][j] = 0;
+                        --lightsOn;
+                    }
                 } else if (action.equals("toggle")) {
                     if (lights[i][j] == 1) {
                         lights[i][j] = 0;
