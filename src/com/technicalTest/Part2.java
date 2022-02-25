@@ -17,9 +17,10 @@ public class Part2 {
                     ++lights[i][j];
                     ++lightsOn;
                 } else if (action.equals("off")) {
-                    --lights[i][j];
-                    if (lights[i][j] < 0) lights[i][j] = 0;
-                    --lightsOn;
+                    if (lights[i][j] > 0) {
+                        --lights[i][j];
+                        --lightsOn;
+                    }
                 } else if (action.equals("toggle")) {
                     lights[i][j] = lights[i][j] + 2;
                     lightsOn = lightsOn + 2;
